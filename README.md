@@ -1,0 +1,1 @@
+# strukture-2023
