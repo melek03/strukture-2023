@@ -118,5 +118,7 @@ int main() {
 
 	printStudentData(noStudents, students, maximumPoints);
 
+	free(students);
+
 	return EXIT_SUCCESS;
 }
