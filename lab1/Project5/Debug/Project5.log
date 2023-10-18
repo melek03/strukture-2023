@@ -1,0 +1,5 @@
+﻿  zadatak 1.c
+C:\Users\mirja\source\repos\Project5\Project5\zadatak 1.c(37,25): error C2057: expected constant expression
+C:\Users\mirja\source\repos\Project5\Project5\zadatak 1.c(37,25): error C2466: cannot allocate an array of constant size 0
+C:\Users\mirja\source\repos\Project5\Project5\zadatak 1.c(37,26): error C2133: 'students': unknown size
+C:\Users\mirja\source\repos\Project5\Project5\zadatak 1.c(40,14): warning C4477: 'fscanf' : format string '%d' requires an argument of type 'int *', but variadic argument 3 has type 'int'
