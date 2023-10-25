@@ -1,0 +1,22 @@
+﻿  drugi.c
+C:\Users\mirja\source\repos\zadatak2\zadatak2\drugi.c(48,9): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\mirja\source\repos\zadatak2\zadatak2\drugi.c(54,13): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\mirja\source\repos\zadatak2\zadatak2\drugi.c(59,13): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\mirja\source\repos\zadatak2\zadatak2\drugi.c(64,13): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\mirja\source\repos\zadatak2\zadatak2\drugi.c(69,13): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\mirja\source\repos\zadatak2\zadatak2\drugi.c(78,13): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\mirja\source\repos\zadatak2\zadatak2\drugi.c(84,13): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\mirja\source\repos\zadatak2\zadatak2\drugi.c(112,5): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\mirja\source\repos\zadatak2\zadatak2\drugi.c(113,5): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\mirja\source\repos\zadatak2\zadatak2\drugi.c(151,18): warning C4047: 'return': 'Position' differs in levels of indirection from 'int'
+C:\Users\mirja\source\repos\zadatak2\zadatak2\drugi.c(153,5): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\mirja\source\repos\zadatak2\zadatak2\drugi.c(154,5): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\mirja\source\repos\zadatak2\zadatak2\drugi.c(238,28): warning C4133: 'function': incompatible types - from 'Position' to 'const char *'
+C:\Users\mirja\source\repos\zadatak2\zadatak2\drugi.c(291,9): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\mirja\source\repos\zadatak2\zadatak2\drugi.c(308): fatal error C1075: '{': no matching token found
+  zad2.c
+C:\Users\mirja\source\repos\zadatak2\zadatak2\zad2.c(48,28): warning C4047: 'return': 'Position' differs in levels of indirection from 'int'
+C:\Users\mirja\source\repos\zadatak2\zadatak2\zad2.c(109,19): warning C4133: 'function': incompatible types - from 'Position' to 'char *'
+C:\Users\mirja\source\repos\zadatak2\zadatak2\zad2.c(109,37): warning C4133: 'function': incompatible types - from 'char [30]' to 'Position'
+C:\Users\mirja\source\repos\zadatak2\zadatak2\zad2.c(212,21): warning C4133: 'function': incompatible types - from 'Position' to 'const char *'
+  Generating Code...
