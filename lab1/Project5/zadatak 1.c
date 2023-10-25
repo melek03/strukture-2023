@@ -3,38 +3,66 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define max_size (30)
-#define max_input (1024)
+#define MAX_SIZE (30)
+#define MAX_INPUT (1024)
 #define FILE_ERROR_OPEN (-1)
-#define max_students (10)
+#define MAX_STUDENTS (10)
 #define MEMORY_ALLOCATION_ERROR (-2)
 
 typedef struct _Student {
-	char name[max_size];
-	char lastname[max_size];
+	char name[MAX_SIZE];
+	char lastname[MAX_SIZE];
 	float points;
 } student;
 
+int noRows(char* file);
+student* readStudentData(int noStudents, char* file);
+float maxPoints(int noStudents, student* students);
+int printStudentData(int noStudents, student* students, float max);
+
+int main() {
+
+	int noStudents = 0;
+	float maximumPoints = 0.0;
+
+	int* absolutePoints = 0;
+	int relativePoints = 0;
+
+	noStudents = noRows("students.txt");
+	printf("Number of students in the file: %d", noStudents);
+
+	student* students = NULL;
+
+	students = readStudentData(noStudents, "students.txt");
+
+	maximumPoints = maxPoints(noStudents, students);
+
+	printStudentData(noStudents, students, maximumPoints);
+
+	free(students);
+
+	return EXIT_SUCCESS;
+}
 
 int noRows(char* file) {
 	int counter = 0;
 
-	FILE* fp = NULL;
-	char buffer[max_input] = { 0 };
+	FILE* filepointer = NULL;
+	char buffer[MAX_INPUT] = { 0 };
 
-	fp = fopen(file, "r");
+	filepointer = fopen(file, "r");
 
-	if (!fp) {
+	if (!filepointer) {
 		printf("Error while opening the file!\n");
 		return FILE_ERROR_OPEN;
 	}
 
-	while (!feof(fp)) {
+	while (!feof(filepointer)) {
 		fgets(buffer, max_input, fp);
 		counter++;
 	}
 
-	fclose(fp);
+	fclose(filepointer);
 
 	return counter;
 }
@@ -42,26 +70,26 @@ int noRows(char* file) {
 student* readStudentData(int noStudents, char* file) {
 	
 	int i = 0;
-	FILE* fp = NULL;
+	FILE* filepointer = NULL;
 
 	student* students = NULL;
 
 	students = (student*)malloc(noStudents * sizeof(student));
 
-	fp = fopen(file, "r");
+	filepointer = fopen(file, "r");
 
-	if (!fp) {
+	if (!students) {
 		printf("Memory allocation failed!\n");
 		free(students);
 		return MEMORY_ALLOCATION_ERROR;
 	}
 
-	while (!feof(fp)) {
-		fscanf(fp, "%s %s %f", students[i].name, students[i].lastname, &students[i].points);
+	while (!feof(filepointer)) {
+		fscanf(filepointer, "%s %s %f", students[i].name, students[i].lastname, &students[i].points);
 		i++;
 	}
 
-	fclose(fp);
+	fclose(filepointer);
 
 	return students;
 }
@@ -94,31 +122,6 @@ int printStudentData(int noStudents, student* students, float max) {
 		printf("%s\t %s\t %f\t %f\t", students[i].name, students[i].lastname, students[i].points, relativePoints);
 		printf("\n");
 	}
-
-	return EXIT_SUCCESS;
-}
-
-
-int main() {
-
-	int noStudents = 0;
-	float maximumPoints = 0.0;
-
-	int* absolutePoints = 0;
-	int relativePoints = 0;
-
-	noStudents = noRows("students.txt");
-	printf("Number of students in the file: %d", noStudents);
-
-	student* students = NULL;
-
-	students = readStudentData(noStudents, "students.txt");
-
-	maximumPoints = maxPoints(noStudents, students);
-
-	printStudentData(noStudents, students, maximumPoints);
-
-	free(students);
 
 	return EXIT_SUCCESS;
 }
