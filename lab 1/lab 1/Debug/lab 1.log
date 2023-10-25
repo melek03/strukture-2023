@@ -1,4 +1,0 @@
-﻿  lab1.c
-c:\users\student\desktop\5sauce\strukture-2023\lab 1\lab 1\lab1.c(24): warning C4047: 'function': 'const char *' differs in levels of indirection from 'int'
-c:\users\student\desktop\5sauce\strukture-2023\lab 1\lab 1\lab1.c(24): warning C4024: 'fopen': different types for formal and actual parameter 2
-  lab 1.vcxproj -> C:\Users\student\Desktop\5sauce\strukture-2023\lab 1\Debug\lab 1.exe
