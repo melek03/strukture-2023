@@ -306,6 +306,22 @@ int readFromFile(Person P, char* filename) {
 		return FILE_OPEN_ERROR;
 	}
 
+	while (!feof(file_pointer)){
+		fscanf(filename, "%s %s %d", name, lastname, year);
+		temp = (Person)malloc(sizeof(person));
+
+		if(temp != NULL){
+			strcpy(temp->name);
+			strcpy(temp->lastname);
+			temp->birthyear = year;
+
+			temp->next = P->Next;
+			P->Next = temp;
+		}
+
+		P = temp;
+	}
+
 	while (fgets(array, MAX_LENGTH, file_pointer) != NULL) {
 		printf(" %s", array);
 	}
