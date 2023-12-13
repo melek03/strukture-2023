@@ -1,0 +1,4 @@
+﻿  lab7.c
+C:\Users\mirja\Desktop\strukture-2023\lab7\lab7.c(20,6): warning C4101: 'choice': unreferenced local variable
+C:\Users\mirja\Desktop\strukture-2023\lab7\lab7.c(19,7): warning C4101: 'name': unreferenced local variable
+  lab7.vcxproj -> C:\Users\mirja\Desktop\strukture-2023\lab7\x64\Debug\lab7.exe
