@@ -118,7 +118,7 @@ root insertToNode(root R, int element) {
 	if (element < R->element) {
 		R->left = insertToNode(R->left, element);
 	}
-	else if (element > R->element) {
+	else if (element >= R->element) {
 		R->right = insertToNode(R->right, element);
 	}
 
