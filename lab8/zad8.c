@@ -23,6 +23,8 @@ int postOrderPrint(root R);
 int preOrderPrint(root R);
 root deleteElement(root R, int element);
 int findElement(root R, int element);
+int levelOrder(root R);
+
 
 int main() {
 
@@ -32,11 +34,12 @@ int main() {
 	while (1) {
 		printf("Menu:\n");
 		printf("1. Insert Element\n");
-		printf("2. Inorder Traversal\n");
-		printf("3. Preorder Traversal\n");
-		printf("4. Postorder Traversal\n");
+		printf("2. Inorder print\n");
+		printf("3. Preorder print\n");
+		printf("4. Postorder print\n");
 		printf("5. Delete Element\n");
 		printf("6. Find Element\n");
+		printf("7. Level print\n");
 		printf("0. Exit\n");
 		printf("Enter: ");
 		scanf("%d", &choice);
@@ -80,6 +83,11 @@ int main() {
 				else printf("%d isn't found in the tree!", element);
 				break;
 
+			case 7:
+				levelOrder(R);
+				printf("\n");
+				break;
+
 			case 0:
 				return 0;
 
@@ -118,7 +126,7 @@ root insertToNode(root R, int element) {
 	if (element < R->element) {
 		R->left = insertToNode(R->left, element);
 	}
-	else if (element > R->element) {
+	else if (element >= R->element) {
 		R->right = insertToNode(R->right, element);
 	}
 
@@ -214,4 +222,30 @@ int findElement(root R, int element) {
 	}
 }
 
+
+//need to do an implementation of this using another linked list not an array
+
+int levelOrder(root R) {
+
+	root queue[100] = { 0 };
+	int front = 0, rear = 0;
+
+	queue[rear++] = R;
+
+	while (front < rear) {
+		root current = queue[front++];
+
+		printf("%d ", current->element);
+
+		if (current->left != NULL) {
+			queue[rear++] = current->left;
+		}
+
+		if (current->right != NULL) {
+			queue[rear++] = current->right;
+		}
+	}
+
+	return EXIT_SUCCESS;
+}
 
