@@ -1,3 +1,0 @@
-﻿  zad9.c
-C:\Users\mirja\Desktop\strukture-2023\lab9\zad9\zad9.c(47,11): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
-  zad9.vcxproj -> C:\Users\mirja\Desktop\strukture-2023\lab9\zad9\x64\Debug\zad9.exe
